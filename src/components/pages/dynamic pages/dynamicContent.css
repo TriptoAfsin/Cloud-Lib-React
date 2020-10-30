@@ -61,6 +61,26 @@
     padding: 1rem 5rem;
 }
 
+@media(max-width: 858px){
+    .search{
+        border-radius: 5px;
+        font-size: large;
+        box-shadow: 1px 3px 10px 0 rgba(74, 128, 228, 0.795);
+        padding: 1rem 3rem;
+    }
+}
+@media(max-width: 858px){
+    .search:hover {
+        transition: ease-in 0.5s;
+        border: solid white;
+        visibility: visible;
+        border-radius: 5px;
+        font-size: large;
+        box-shadow: 1px 3px 20px 0 rgba(77, 177, 235, 0.795);
+        padding: 1rem 3rem;
+    }
+}
+
 #database{
     color: black;
     margin-left: 1rem;
