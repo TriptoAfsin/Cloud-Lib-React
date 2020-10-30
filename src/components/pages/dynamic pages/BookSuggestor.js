@@ -68,7 +68,7 @@ function getRange(){
           console.log("random-btn called");
           var random1 = Math.floor(Math.random()*sortedDB.length); //it's the range sorter algo
           document.getElementById("random_books").innerHTML = `
-          <div class="card" onclick="location.href='${sortedDB[random1].link}'">
+          <div class="card">
           <p class="card-title">${sortedDB[random1].name} <br></br>(${sortedDB[random1].writer}) <br><span>${sortedDB[random1].subject}</span></p>
           <p><a href="${sortedDB[random1].link}" target="blank" id="url" class="random-download">Download</a></p>
           <small>Language: ${sortedDB[random1].language} / Page: ${sortedDB[random1].page} </small>
