@@ -23,7 +23,7 @@ function Team() {
         <p className="contributor">Enamul Muyeed Latifi</p>
         <p className="contributor">Nazmul Hasan</p>
         <p className="contributor">Shahriar Rumman</p>
-        <Link to="/submit">
+        <Link to="/Cloud-Lib-React/submit">
             <p className="contributor"><a href="/">Contribute Books</a></p>
         </Link>
         

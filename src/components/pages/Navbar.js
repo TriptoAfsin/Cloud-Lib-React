@@ -47,7 +47,7 @@ function Navbar() {
         <React.Fragment>
             <div className="navbar">
                 <div className="navbar-container container">
-                    <Link className="navbar-logo" to='/'>
+                    <Link className="navbar-logo" to='/Cloud-Lib-React/'>
                         <AiFillCloud className="navbar-icon"></AiFillCloud>
                         Cloud Lib
                     </Link>

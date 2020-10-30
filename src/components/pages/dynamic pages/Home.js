@@ -117,7 +117,7 @@ function Home() {
 
        <input type="text" placeholder="Type to Search" id="search" className="search" onChange={handleSearch} value={query}></input><br></br>
        <p className="suggestion" id="suggestion">search by the book's name/ writer's name/ subject/ category,<b> simply just type & </b><b>Don't put random keywords</b></p><br></br>
-       <p className="suggestion" id="suggestion2"><Link to="/help"><p href="help.html">If You are having Download Problem Tap here</p></Link></p>
+       <p className="suggestion" id="suggestion2"><Link to="/Cloud-Lib-React/help"><p href="help.html">If You are having Download Problem Tap here</p></Link></p>
         </div>
         <div className="result-container">
     <div id="list" className="list"></div>
