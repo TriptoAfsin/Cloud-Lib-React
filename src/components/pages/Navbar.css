@@ -11,6 +11,7 @@
   /*Font Size*/
   --navItemFontSize: 1.1rem;
   --logoSize: 1.7rem;
+  --navLinksMobileFontSize: 1.3rem;
 
 
   /*Navbar Height*/
@@ -105,11 +106,11 @@
     .nav-menu {
       display: flex;
       flex-direction: column;
-      width: 91%;
+      width: 90%;
       height: 100vh;
       position: absolute;
       top: 50px;
-      left: -100%;
+      left: -90%;
       opacity: 1;
       transition: all 0.5s ease;
     }
@@ -123,6 +124,7 @@
     }
   
     .nav-links {
+      font-size: var(--navLinksMobileFontSize);
       text-align: center;
       padding: 0rem;
       width: 100%;
@@ -130,8 +132,9 @@
     }
   
     .nav-links:hover {
+      font-size: 1.3rem;
       color: var(--navbarItemHoverColor);
-      transform: scale(1.1);
+      transform: scale(1.4);
       font-weight: bold;
       transition: all 0.3s ease;
     }

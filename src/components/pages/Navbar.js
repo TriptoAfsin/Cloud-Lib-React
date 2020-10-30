@@ -80,7 +80,7 @@ function Navbar() {
                                     <Link className="nav-links" to="/Cloud-Lib-React/help" onClick={closeMobileMenu}>Help</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-links" href="http://www.facebook.com/sharer.php?u=https://triptoafsin.github.io/Cloud-Lib/" target="blank">Share</a>
+                                    <a className="nav-links" href="http://www.facebook.com/sharer.php?u=https://triptoafsin.github.io/Cloud-Lib-React/" target="blank">Share</a>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-links" to="/Cloud-Lib-React/about" onClick={closeMobileMenu}>About</Link>
