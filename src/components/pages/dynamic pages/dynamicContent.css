@@ -288,13 +288,22 @@
 }
 
 .random-tot{
-    margin-top: -3%;
+    margin-top: -5%;
 }
 
 .random-container{
-    margin-left: -7% !important;
+    margin-left: -4.5% !important;
     margin: 10px auto;
 }
+
+@media screen and (max-width: 800px){
+    .random-container{
+        margin-left: 0% !important;
+        margin: 10px auto;
+    }
+}
+
+
 
 .random-container .card-title{
     font-size: 1.1rem;
@@ -406,6 +415,7 @@
 
 @media screen and (min-width: 800px){
     .card{
+        margin-right: 1rem;
         max-width: 320px !important;
         min-width: 300px;
         padding: 1rem 3rem;
