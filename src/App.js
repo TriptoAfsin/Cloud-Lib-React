@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/pages/Navbar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Submit from './components/pages/static pages/Submit';
 import Request from './components/pages/static pages/Request';
 import WebApps from './components/pages/static pages/WebApps';
@@ -16,7 +16,7 @@ function App() {
     <Router >
      <Navbar></Navbar>
      <Switch>
-          <Route path='/Cloud-Lib-React/' exact component={Home}></Route>
+          <Route path='/' exact component={Home}></Route>
           <Route path='/Cloud-Lib-React/books-suggestor' exact component={BookSuggestor}></Route>
           <Route path='/Cloud-Lib-React/browse-books' exact component={BrowseBooks}></Route>
           <Route path='/Cloud-Lib-React/help' exact component={Help}></Route>

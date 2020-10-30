@@ -47,7 +47,7 @@ function Navbar() {
         <React.Fragment>
             <div className="navbar">
                 <div className="navbar-container container">
-                    <Link className="navbar-logo" to='/Cloud-Lib-React/'>
+                    <Link className="navbar-logo" to='/'>
                         <AiFillCloud className="navbar-icon"></AiFillCloud>
                         Cloud Lib
                     </Link>
@@ -56,7 +56,7 @@ function Navbar() {
                     </div>
                             <ul className={click ? 'nav-menu active': 'nav-menu'}>
                                 <li className="nav-item">
-                                    <Link className="nav-links" to="/Cloud-Lib-React/" onClick={closeMobileMenu}>Home</Link>
+                                    <Link className="nav-links" to="/" onClick={closeMobileMenu}>Home</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-links" to="/Cloud-Lib-React/browse-books" onClick={closeMobileMenu}>Browse Books</Link>
