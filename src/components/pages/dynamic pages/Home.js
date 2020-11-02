@@ -7,41 +7,30 @@ import './dynamicContent.css'
 
 
 
-
-
 function Home() {
 
     //states
     const [loading, setLoading] = useState(true)
     const [query, setQuery] = useState('')
-    const [db, setDb] = useState(0)
-    const[dbData, setDbData] = useState('');
+    const[dbData, setDbData] = useState(null);
     const[match, setMatch] = useState('')
 
-    //pulling data 
 
+    
+    //pulling data 
     useEffect(
         () => {
             axios.get("https://triptoafsin.github.io/API-Host/BookDB.json")
         .then(res => {
         setLoading(false);
-        //console.log(res.data);
-        //console.log(res.data.length);
-        setDb(res.data.length);
         setDbData(res.data);
-        //wholeDB = res.data;
-        //console.log(wholeDB);
         console.log("Axios called");
     }).catch(err => console.log(err));
 
         }, []
     )
-
     console.log(dbData);
-
-
     
-
 
     //regex
     const matchList = document.getElementById("list");
@@ -70,13 +59,11 @@ function Home() {
 
          //get matches
          searchQuery(books)
+         //SearchEngBin(books)
         console.log(query)
     }
 
-    //useEffect(handleSearch ,[query])
-
     //show results in html
-
     const outputHtml = matches =>{
         if(matches.length > 0){
             const html = matches.map(match => `
@@ -106,7 +93,7 @@ function Home() {
     return (
         <React.Fragment>
             <div className="data-container">
-                <img src="./imgs/db_new.png" className="data-img" alt="db"></img><p id="database">{loading ? "loading..." : `${db} Books`}</p>
+                <img src="./imgs/db_new.png" className="data-img" alt="db"></img><p id="database">{(loading || dbData === null) ? "loading..." : `${dbData.length} Books`}</p>
             </div>
             <div className="img-holder" id="img-holder">
                 <img src="./imgs/cloud.png"  className="cloud" alt="cloud lib"></img>

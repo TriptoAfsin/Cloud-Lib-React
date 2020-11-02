@@ -1,34 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import React from 'react'
+import DataProvider from '../../global-components/DataProvider'
 import './dynamicContent.css'
 
 
 function BrowseBooks() {
-
-
-    const[dbData, setDbData] = useState('')
-    const [loading, setLoading] = useState(true)
-
-    //pulling data 
-
-    useEffect(
-        () => {
-            axios.get("https://triptoafsin.github.io/API-Host/BookDB.json")
-        .then(res => {
-        setLoading(false);
-        //console.log(res.data);
-        //console.log(res.data.length);
-        setDbData(res.data);
-        //wholeDB = res.data;
-        //console.log(wholeDB);
-        console.log("Axios called");
-    }).catch(err => console.log(err));
-
-        }, []
-    )
-
-    console.log(dbData);
-
+    const newData = DataProvider()
+    console.log(newData)
 
     //books
 
@@ -41,7 +18,7 @@ function displayBooks(){
 
 //this function searches the booklist
 const searchBooks = async searchText =>{
-    books = dbData;
+    books = newData;
     //get matches
     let matches = books.filter(book =>{
         const regex = new RegExp(`${searchText}`, 'gi'); // ^: will search for which resuls starts with 
@@ -94,7 +71,7 @@ function displayBooks2(){
 
 //this function searches the booklist
 const searchBooks = async searchText =>{
-    books = dbData;
+    books = newData;
     //get matches
     let matches = books.filter(book =>{
         const regex = new RegExp(`${searchText}`, 'gi'); // ^: will search for which resuls starts with 

@@ -1,32 +1,10 @@
-import React, {useEffect, useState} from 'react'
-import axios from 'axios'
+import React from 'react'
+import DataProvider from '../../global-components/DataProvider'
 import './dynamicContent.css'
 
 function BookSuggestor() {
-
-    const[dbData, setDbData] = useState('')
-    const [loading, setLoading] = useState(true)
-
-    //pulling data 
-
-    useEffect(
-        () => {
-            axios.get("https://triptoafsin.github.io/API-Host/BookDB.json")
-        .then(res => {
-        setLoading(false);
-        //console.log(res.data);
-        //console.log(res.data.length);
-        setDbData(res.data);
-        //wholeDB = res.data;
-        //console.log(wholeDB);
-        console.log("Axios called");
-    }).catch(err => console.log(err));
-
-        }, []
-    )
-
-    console.log(dbData);
-
+    const newData = DataProvider()
+    console.log(newData)
 
     //random books
 function getRange(){
@@ -38,7 +16,7 @@ function getRange(){
  
  //this function searches the booklist
  const searchBooks = async searchText =>{
-    books = dbData;
+    books = newData;
     //get matches
     let matches = books.filter(book =>{
         const regex = new RegExp(`${searchText}`, 'gi'); // ^: will search for which resuls starts with 
@@ -74,7 +52,7 @@ function getRange(){
           <small>Language: ${sortedDB[random1].language} / Page: ${sortedDB[random1].page} </small>
           </div>
           `;
-          console.log("Random Book 1: "+ dbData[random1].name);
+          console.log("Random Book 1: "+ newData[random1].name);
           console.log(random1);
       }
     }
