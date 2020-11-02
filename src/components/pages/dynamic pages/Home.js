@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import DataProvider from '../../global-components/DataProvider'
-import axios from 'axios'
+//import axios from 'axios'
 import './dynamicContent.css'
 
 
@@ -10,9 +10,9 @@ import './dynamicContent.css'
 
 function Home() {
     //states
-    const [loading, setLoading] = useState(true)
+    //const [loading, setLoading] = useState(true)
     const [query, setQuery] = useState('')
-    const[dbData, setDbData] = useState(null);
+    //const[dbData, setDbData] = useState(null);
     const[match, setMatch] = useState('')
 
 
