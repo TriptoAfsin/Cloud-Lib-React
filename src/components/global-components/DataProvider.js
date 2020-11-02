@@ -6,24 +6,22 @@ function DataProvider() {
     console.log("DataProvider Called")
     const[dbData, setDbData] = useState(null)
     const [loading, setLoading] = useState(true)
+    const url = "https://triptoafsin.github.io/API-Host/BookDB.json"
 
      //pulling data 
 
      useEffect(
         () => {
-            axios.get("https://triptoafsin.github.io/API-Host/BookDB.json")
+            axios.get(url)
         .then(res => {
         setLoading(false);
         setDbData(res.data);
         console.log("Axios called");
-        //return dbData;
+        return dbData;
     }).catch(err => console.log(err));
 
-        }, [dbData]
+        }, [url]
 )
-
-
-
     return dbData;
 }
 

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import DataProvider from '../../global-components/DataProvider'
 import axios from 'axios'
 import './dynamicContent.css'
 
@@ -8,7 +9,6 @@ import './dynamicContent.css'
 
 
 function Home() {
-
     //states
     const [loading, setLoading] = useState(true)
     const [query, setQuery] = useState('')
@@ -16,7 +16,11 @@ function Home() {
     const[match, setMatch] = useState('')
 
 
-    
+    const newData = DataProvider()
+    console.log(newData)
+
+
+    /*
     //pulling data 
     useEffect(
         () => {
@@ -30,6 +34,7 @@ function Home() {
         }, []
     )
     console.log(dbData);
+    */
     
 
     //regex
@@ -55,7 +60,7 @@ function Home() {
     const handleSearch = (e) => {
         setQuery(e.target.value)
         console.log("handleSearch Called")
-        let books = dbData;
+        let books = newData;
 
          //get matches
          searchQuery(books)
@@ -93,11 +98,11 @@ function Home() {
     return (
         <React.Fragment>
             <div className="data-container">
-                <img src="./imgs/db_new.png" className="data-img" alt="db"></img><p id="database">{(loading || dbData === null) ? "loading..." : `${dbData.length} Books`}</p>
+                <img src="./imgs/db_new.png" className="data-img" alt="db"></img><p id="database">{(newData === null) ? "loading..." : `${newData.length} Books`}</p>
             </div>
             <div className="img-holder" id="img-holder">
                 <img src="./imgs/cloud.png"  className="cloud" alt="cloud lib"></img>
-                <p className="img-txt">{loading ? "loading..." : "Cloud Lib"}</p>
+                <p className="img-txt">{(newData === null) ? "loading..." : "Cloud Lib"}</p>
                 <p className="img-txt-2">{ (query.length > 0) ?  `${match} Books Found` : "" }</p>
              </div>
             <div className="search-container">
