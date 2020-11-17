@@ -35,7 +35,9 @@
     text-decoration: none;
     display: inline-block;
 
-}.app-btn:hover{
+}
+
+.app-btn:hover{
     transition: ease-in 0.25s;
     border-radius: 5px;
     color: white;

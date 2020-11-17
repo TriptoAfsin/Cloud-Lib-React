@@ -19,6 +19,15 @@ function Home() {
     const newData = DataProvider()
     console.log(newData)
 
+    useEffect(
+        () => {
+            if(newData !== null){
+                searchQuery(newData)
+                console.log(query)
+            }
+        }, [newData, query]
+    )
+
 
     /*
     //pulling data 
@@ -45,7 +54,7 @@ function Home() {
             return book.name.match(regex) || book.writer.match(regex) || book.subject.match(regex) || book.terms.match(regex);
         });
 
-        if(query.length === 1){
+        if(query.length === 0){
             matches = [];
             matchList.innerHTML ="";
         }
@@ -107,7 +116,7 @@ function Home() {
              </div>
             <div className="search-container">
 
-       <input type="text" placeholder="Type to Search" id="search" className="search" onChange={handleSearch} value={query}></input><br></br>
+       <input type="text" placeholder="Type to Search" id="search" className="search" onChange={e => setQuery(e.target.value)} value={query}></input><br></br>
        <p className="suggestion" id="suggestion">search by the book's name/ writer's name/ subject/ category,<b> simply just type & </b><b>Don't put random keywords</b></p><br></br>
        <p className="suggestion" id="suggestion2"><Link to="/Cloud-Lib-React/help"><p href="help.html">If You are having Download Problem Tap here</p></Link></p>
         </div>

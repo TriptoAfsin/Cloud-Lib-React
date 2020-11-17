@@ -1,6 +1,10 @@
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 
+
+//kinda similar article: https://dev.to/rikurouvila/clean-and-reusable-data-fetching-in-react-components-165
+//more on axios: https://blog.logrocket.com/how-to-make-http-requests-like-a-pro-with-axios/
+
 function DataProvider() {
 
     console.log("DataProvider Called")
