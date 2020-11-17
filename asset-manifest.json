@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Cloud-Lib-React/static/css/main.df214a4a.chunk.css",
-    "main.js": "/Cloud-Lib-React/static/js/main.aecafcb7.chunk.js",
-    "main.js.map": "/Cloud-Lib-React/static/js/main.aecafcb7.chunk.js.map",
+    "main.css": "/Cloud-Lib-React/static/css/main.58f45b62.chunk.css",
+    "main.js": "/Cloud-Lib-React/static/js/main.f2a95793.chunk.js",
+    "main.js.map": "/Cloud-Lib-React/static/js/main.f2a95793.chunk.js.map",
     "runtime-main.js": "/Cloud-Lib-React/static/js/runtime-main.dcb46ab4.js",
     "runtime-main.js.map": "/Cloud-Lib-React/static/js/runtime-main.dcb46ab4.js.map",
     "static/js/2.090e1895.chunk.js": "/Cloud-Lib-React/static/js/2.090e1895.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.897390f0.chunk.js": "/Cloud-Lib-React/static/js/3.897390f0.chunk.js",
     "static/js/3.897390f0.chunk.js.map": "/Cloud-Lib-React/static/js/3.897390f0.chunk.js.map",
     "index.html": "/Cloud-Lib-React/index.html",
-    "static/css/main.df214a4a.chunk.css.map": "/Cloud-Lib-React/static/css/main.df214a4a.chunk.css.map",
+    "static/css/main.58f45b62.chunk.css.map": "/Cloud-Lib-React/static/css/main.58f45b62.chunk.css.map",
     "static/js/2.090e1895.chunk.js.LICENSE.txt": "/Cloud-Lib-React/static/js/2.090e1895.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dcb46ab4.js",
     "static/js/2.090e1895.chunk.js",
-    "static/css/main.df214a4a.chunk.css",
-    "static/js/main.aecafcb7.chunk.js"
+    "static/css/main.58f45b62.chunk.css",
+    "static/js/main.f2a95793.chunk.js"
   ]
 }
